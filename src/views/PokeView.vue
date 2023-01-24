@@ -116,8 +116,15 @@ const getPokeInfo = async () => {
 const handleFavorite = async () => {
   isFavorite.value = !isFavorite.value;
 
-  if (isFavorite.value === true)
-    await useFavoritos.addFavorite(pokeInfo.value[0]);
+  if (isFavorite.value === true) {
+    const pokeFav = {
+      id: pokeInfo.value[0].id,
+      sprites: pokeInfo.value[0].sprites,
+      name: pokeInfo.value[0].name,
+    };
+    // await useFavoritos.addFavorite(pokeInfo.value[0]);
+    await useFavoritos.addFavorite(pokeFav);
+  }
 
   if (isFavorite.value === false) {
     await useFavoritos.removeFavorite(pokeInfo.value[0].id);
