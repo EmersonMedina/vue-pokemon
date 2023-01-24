@@ -1,24 +1,31 @@
 <script setup>
-import { RouterLink, RouterView } from 'vue-router'
+import { RouterLink, RouterView } from "vue-router";
 </script>
 
 <template>
-
-  <nav class="navbar navbar-light bg-dark navbar-dark">
+  <nav class="navbar navbar-light bg-dark navbar-dark sticky-top">
     <div class="container">
       <router-link class="navbar-brand" to="/">
-        <img src="@/assets/logo.svg" alt="" width="30" height="24" class="d-inline-block align-text-top">
+        <img
+          src="@/assets/pokeball.svg"
+          alt=""
+          width="30"
+          height="24"
+          class="d-inline-block align-text-top"
+        />
         PokeAPI
       </router-link>
       <div>
-        <router-link class="btn btn-outline-primary me-2" to="/"> Home </router-link>
-        <router-link class="btn btn-outline-success me-2" to="/pokemons"> Pokemons </router-link>
-        <router-link class="btn btn-outline-warning" to="/favoritos"> Favoritos </router-link>
+        <router-link class="btn btn-success me-2" to="/pokemons">
+          Pokemons
+        </router-link>
+        <router-link class="btn btn-warning" to="/favoritos">
+          Favoritos
+        </router-link>
       </div>
     </div>
-    
   </nav>
-  <div class="container text-center" >
+  <div class="container text-center">
     <RouterView />
   </div>
 </template>
