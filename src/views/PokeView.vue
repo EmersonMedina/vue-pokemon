@@ -28,7 +28,7 @@ if (window.localStorage.getItem("pokemons")) {
 
 const pokeName = route.params.name;
 
-if (window.localStorage.getItem("pokemons")) {
+if (window.localStorage.getItem("favoritos")) {
   const data = JSON.parse(window.localStorage.getItem("favoritos"));
 
   isFavorite.value = data.some((x) => x.name === pokeName);
